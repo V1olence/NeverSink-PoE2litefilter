@@ -80,6 +80,13 @@ SetBackgroundColor 0 0 0 180
 #--------------------------
 
 # Always make Spirit gems pop
+Hide
+ItemLevel <= 19
+BaseType "Uncut Spirit Gem"
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+SetFontSize 40
+
 Show
 BaseType "Uncut Spirit Gem"
 SetTextColor 20 240 240
@@ -112,14 +119,14 @@ MinimapIcon 1 Cyan Triangle
 SetFontSize 40
 
 # Gems up to level 18 in maps don't get a special highlight
-Show
-ItemLevel <= 18
+Hide
+ItemLevel <= 19
 BaseType "Uncut Skill Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 SetFontSize 35
 
-Show
+Hide
 BaseType "Uncut Support Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
@@ -409,7 +416,16 @@ MinimapIcon 1 Yellow Diamond
 Show
 Rarity Normal
 Class "Rings" "Amulets" "Belts"
+BaseType "Heavy Belt" "Stellar Amulet" "Sapphire Ring"
 SetFontSize 40
+SetBorderColor 233 206 75
+PlayEffect Yellow
+PlayAlertSound 9 200
+MinimapIcon 1 White Diamond
+
+Hide
+Rarity Normal
+Class "Rings" "Amulets" "Belts"
 
 Show
 Class "Rings" "Amulets" "Belts"
@@ -420,29 +436,29 @@ SetFontSize 40
 # Salvagable Items
 #--------------------------
 
-Show
-Sockets > 0
-Rarity Normal
-SetBorderColor 200 200 200
-SetFontSize 35
+# Show
+# Sockets > 0
+# Rarity Normal
+# SetBorderColor 200 200 200
+# SetFontSize 35
 
-Show
-Quality > 0
-Rarity Normal
-SetBorderColor 200 200 200
-SetFontSize 35
+# Show
+# Quality > 0
+# Rarity Normal
+# SetBorderColor 200 200 200
+# SetFontSize 35
 
-Show
-Sockets > 0
-Rarity Magic
-SetBorderColor 0 0 200
-SetFontSize 35
+# Show
+# Sockets > 0
+# Rarity Magic
+# SetBorderColor 0 0 200
+# SetFontSize 35
 
-Show
-Quality > 0
-Rarity Magic
-SetBorderColor 0 0 200
-SetFontSize 35
+# Show
+# Quality > 0
+# Rarity Magic
+# SetBorderColor 0 0 200
+# SetFontSize 35
 
 #--------------------------
 # Random Rares
@@ -515,10 +531,10 @@ Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One 
 ### OPTIONAL RULE: Hide random bases
 # REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
 
-# Hide
-# Rarity <= Magic
-# Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
-# AreaLevel >= 65
+Hide
+Rarity <= Magic
+Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+AreaLevel >= 65
 
 ### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
 
